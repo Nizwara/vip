@@ -2,17 +2,17 @@
 
 apt install rclone
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/Hunterscrip/perv1/main/install/rclone.conf"
-git clone  https://github.com/Hunterscrip/wondershaper.git
+wget -O /root/.config/rclone/rclone.conf "https://github.com/Nizwara/vip/main/install/rclone.conf"
+git clone  https://github.com/casper9/wondershaper.git
 cd wondershaper
 make install
 cd
 rm -rf wondershaper
 cd /usr/bin
-wget -O backup "https://raw.githubusercontent.com/Hunterscrip/perv1/main/menu/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/Hunterscrip/perv1/main/menu/restore.sh"
-wget -O cleaner "https://raw.githubusercontent.com/Hunterscrip/perv1/main/install/cleaner.sh"
-wget -O xp "https://raw.githubusercontent.com/Hunterscrip/perv1/main/install/xp.sh"
+wget --no-check-certificate -O backup "https://github.com/Nizwara/vip/main/menu/backup.sh"
+wget --no-check-certificate -O restore "https://github.com/Nizwara/vip/main/menu/restore.sh"
+wget --no-check-certificate -O cleaner "https://github.com/Nizwara/vip/main/install/cleaner.sh"
+wget --no-check-certificate -O xp "https://github.com/Nizwara/vip/main/menu/xp.sh"
 chmod +x /usr/bin/backup
 chmod +x /usr/bin/restore
 chmod +x /usr/bin/cleaner
@@ -51,7 +51,7 @@ service cron restart > /dev/null 2>&1
 
 # > Pasang Limit
 
-wget "https://raw.githubusercontent.com/Hunterscrip/perv1/main/bin/limit.sh" >/dev/null 2>&1
+wget --no-check-certificate http://rmblvpn.my.id/bin/limit.sh" >/dev/null 2>&1
 
 chmod +x limit.sh && bash limit.sh >/dev/null 2>&1
     
