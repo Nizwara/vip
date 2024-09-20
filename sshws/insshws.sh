@@ -1,17 +1,16 @@
 #!/bin/bash
 # Proxy For Edukasi & Imclass
-
+REPOSC="https://raw.githubusercontent.com/Nizwara/vip/main"
 # Link Hosting Kalian
-RMBL="wget --no-check-certificate http://rmblvpn.my.id/"
 
-wget --no-check-certificate -O /usr/local/bin/ws-dropbear http://rmblvpn.my.id/sshws/ws-dropbear
+wget -q -O /usr/local/bin/ws-dropbear ${REPOSC}/sshws/ws-dropbear
 chmod +x /usr/local/bin/ws-dropbear
 
 # Installing Service
 cat > /etc/systemd/system/ws-nontls.service << END
 [Unit]
-Description=Python Proxy Mod By RMBL
-Documentation=https://t.me/rmblvpn
+Description=Python Proxy Decode by RMBL
+Documentation=https://t.me/rmblvpn1
 After=network.target nss-lookup.target
 
 [Service]
@@ -32,14 +31,14 @@ systemctl enable ws-dropbear.service
 systemctl start ws-dropbear.service
 systemctl restart ws-dropbear.service
 
-wget --no-check-certificate -O /usr/local/bin/ws-ovpn http://rmblvpn.my.id/sshws/ws-ovpn.py
+wget -q -O /usr/local/bin/ws-ovpn ${REPOSC}/sshws/ws-ovpn.py
 chmod +x /usr/local/bin/ws-ovpn
 
 # Installing Service
 cat > /etc/systemd/system/ws-ovpn.service << END
 [Unit]
-Description=Python Proxy Mod By RMBL
-Documentation=https://t.me/rmblvpn
+Description=Python Proxy Decode by RMBL
+Documentation=https://t.me/rmblvpn1
 After=network.target nss-lookup.target
 
 [Service]
@@ -59,13 +58,13 @@ systemctl daemon-reload
 systemctl enable ws-ovpn
 systemctl restart ws-ovpn
 
-wget --no-check-certificate -O /usr/local/bin/ws-stunnel http://rmblvpn.my.id/sshws/ws-stunnel
+wget -q -O /usr/local/bin/ws-stunnel ${REPOSC}/sshws/ws-stunnel
 chmod +x /usr/local/bin/ws-stunnel
 
 # Installing Service
 cat > /etc/systemd/system/ws-stunnel.service << END
 [Unit]
-Description=Python Proxy Mod By Rmbl
+Description=Python Proxy Decode by RMBL
 Documentation=https://t.me/rmblvpn1
 After=network.target nss-lookup.target
 
@@ -85,3 +84,4 @@ END
 systemctl enable ws-stunnel.service
 systemctl start ws-stunnel.service
 systemctl restart ws-stunnel.service
+
