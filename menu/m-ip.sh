@@ -177,7 +177,7 @@ done
 if [ -z $hari ]; then
 echo -e "$COLOR1 ${NC}   [INFO] Please Input exp date"
 echo -e "$COLOR1==========================================================${NC}" 
-echo -e "$COLOR1========================================================== ${WH}BY${NC} ${COLOR1}==${NC}"
+echo -e "$COLOR1=================================== ${WH}BY${NC} ${COLOR1}==${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}=== $author ===${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1==========================================================${NC}" 
 echo -e ""
@@ -1252,7 +1252,7 @@ echo -e "   $COLOR1 [04]$NC === ${WH}CHANGE NAME    $COLOR1 [08]$NC === ${WH}TAM
 echo -e "   "
 echo -e "   $COLOR1 [00]$NC === ${WH}GO BACK"
 echo -e "$COLOR1==========================================================${NC}" 
-echo -e "$COLOR1			═══ ${WH}SISA IP REG${NC} ${COLOR1}═══${NC}"
+echo -e "$COLOR1	═══ ${WH}SISA IP REG${NC} ${COLOR1}═══${NC}"
 echo -e "$COLOR1 ${NC}                    ${WH}=== $ipmini ===${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1==========================================================${NC}" 
 echo -e ""
