@@ -35,7 +35,7 @@ rm -rf /root/rmbl >/dev/null
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
-uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
+uu=$(curl -sS https://pastebin.com/raw/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)
 
 APIGIT=$(cat /etc/github/api)
 EMAILGIT=$(cat /etc/github/email)
@@ -483,7 +483,7 @@ clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
-uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
+uu=$(curl -sS https://pastebin.com/raw/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)
 
 author=$(cat /etc/profil)
 TIMES="10"
@@ -613,7 +613,7 @@ clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
-uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
+uu=$(curl -sS https://pastebin.com/raw/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)
 
 author=$(cat /etc/profil)
 TIMES="10"
@@ -738,7 +738,7 @@ clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
-uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
+uu=$(curl -sS https://pastebin.com/raw/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)
 
 author=$(cat /etc/profil)
 TIMES="10"
@@ -872,7 +872,7 @@ clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
-uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
+uu=$(curl -sS https://pastebin.com/raw/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)
 
 author=$(cat /etc/profil)
 TIMES="10"
@@ -1015,7 +1015,7 @@ clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/casper9/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/casper9/permission/main/ipmini | grep $MYIP | awk '{print $7}')
-uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
+uu=$(curl -sS https://pastebin.com/raw/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)
 
 author=$(cat /etc/profil)
 TIMES="10"
@@ -1151,7 +1151,7 @@ clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
-uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
+uu=$(curl -sS https://pastebin.com/raw/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)
 author=$(cat /etc/profil)
 cd
 rm -rf /root/rmbl >/dev/null 
