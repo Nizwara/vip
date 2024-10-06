@@ -37,9 +37,9 @@ listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ip
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
 uu=$(curl -sS https://pastebin.com/raw/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)
 #MENGAMBIL DATA YANG DIBUTUHKAN
-curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/email
-curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $3}' > /etc/github/username
-curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $4}' > /etc/github/api
+curl -S https://pastebin.com/raw/AFJ3T9Mt > /etc/github/email
+curl -S https://pastebin.com/raw/xGRQghLw > /etc/github/username
+curl -S https://pastebin.com/raw/q9PN1Us9 > /etc/github/api
 clear
 APIGIT=$(cat /etc/github/api)
 EMAILGIT=$(cat /etc/github/email)
