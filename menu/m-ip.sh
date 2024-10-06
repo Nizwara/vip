@@ -217,7 +217,7 @@ U4=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini |
 U5=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $5}')
 U6=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $6}')
 
-echo "### $client $exp $daftar" >> /etc/permission/ipmini
+echo "### $client $exp $daftar" >> /root/rmbl/ipmini
 exp=$(date -d "$hari days" +"%Y-%m-%d")
 hariini=$(date -d "0 days" +"%Y-%m-%d")
 git config --global user.email "${EMAILGIT}" &> /dev/null
