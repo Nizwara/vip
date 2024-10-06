@@ -32,10 +32,10 @@ checking_sc() {
 checking_sc
 cd
 curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/email
-curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/username
-curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/url
-url=$(cat /etc/github/url)
-wget -O /etc/github/api "$url"
+curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $3}' > /etc/github/username
+curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $4}' > /etc/github/url
+url=$(cat /etc/github/url | cut -d "/" -f6)
+wget -q --show-progress --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=$url' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=$url" -O /etc/github/api && rm -rf /tmp/cookies.txt
 rm -rf /root/rmbl >/dev/null 
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
