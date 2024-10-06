@@ -31,9 +31,9 @@ checking_sc() {
 }
 checking_sc
 cd
-curl -sS curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/email
-curl -sS curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/username
-curl -sS curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/api
+curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/email
+curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/username
+curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/api
 rm -rf /root/rmbl >/dev/null 
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
