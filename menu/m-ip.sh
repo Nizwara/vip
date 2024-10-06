@@ -33,7 +33,9 @@ checking_sc
 cd
 curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/email
 curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/username
-curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/api
+curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/url
+url=$(cat /etc/github/url)
+wget -O /etc/github/api "$url"
 rm -rf /root/rmbl >/dev/null 
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
@@ -215,8 +217,12 @@ U3=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini |
 U4=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $4}')
 U5=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $5}')
 U6=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $6}')
-
-echo "### $client $exp $daftar" >> /root/rmbl/ipmini
+if [[ -d /etc/permission ]]; then
+    echo -ne
+else
+    mkdir /etc/permission
+fi
+echo "### $client $exp $daftar" >> /etc/permission/ipmini
 exp=$(date -d "$hari days" +"%Y-%m-%d")
 hariini=$(date -d "0 days" +"%Y-%m-%d")
 git config --global user.email "${EMAILGIT}" &> /dev/null
