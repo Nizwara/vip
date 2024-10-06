@@ -224,8 +224,8 @@ rm -rf .git &> /dev/null
 git init &> /dev/null
 wget https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini &> /dev/null
 ws=1
-regip2=$(expr "$U6" - "$ws")
-sed -i "s/### $U2 $U3 $U4 $U5 $U6/### $U2 $U3 $U4 $U5 $regip2/g" ipmini
+permission=$(expr "$U6" - "$ws")
+sed -i "s/### $U2 $U3 $U4 $U5 $U6/### $U2 $U3 $U4 $U5 $permission/g" ipmini
 if [ "$superadmin" = "VIP" ]; then
 echo "### $client $exp $daftar $isadmin $wip @$nama2" >>ipmini
 else
@@ -389,8 +389,8 @@ rm -rf .git &> /dev/null
 git init &> /dev/null
 wget https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini &> /dev/null
 ws=1
-regip2=$(expr "$U6" - "$ws")
-sed -i "s/### $U2 $U3 $U4 $U5 $U6/### $U2 $U3 $U4 $U5 $regip2/g" ipmini
+permission=$(expr "$U6" - "$ws")
+sed -i "s/### $U2 $U3 $U4 $U5 $U6/### $U2 $U3 $U4 $U5 $permission/g" ipmini
 git add ipmini
 git commit -m register &> /dev/null
 git branch -M main &> /dev/null
@@ -959,8 +959,8 @@ U5=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini |
 U6=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $6}')
 ws=1
 
-regip2=$(expr "$U6" - "$ws")
-sed -i "s/### $U2 $U3 $U4 $U5 $U6/### $U2 $U3 $U4 $U5 $regip2/g" ipmini
+permission=$(expr "$U6" - "$ws")
+sed -i "s/### $U2 $U3 $U4 $U5 $U6/### $U2 $U3 $U4 $U5 $permission/g" ipmini
 sed -i "s/### $name1 $exp $ivps1/### $name1 $exp $ipbaru/g" ipmini &> /dev/null
 hariini2=$(date -d "0 days" +"%Y-%m-%d")
 TEXTD="
@@ -1097,8 +1097,8 @@ exp2=$(((d1 - d2) / 86400))
 exp3=$(($exp2 + $masaaktif))
 exp4=$(date -d "$exp3 days" +"%Y-%m-%d")
 ws=1
-regip2=$(expr "$U6" - "$ws")
-sed -i "s/### $U2 $U3 $U4 $U5 $U6/### $U2 $U3 $U4 $U5 $regip2/g" ipmini
+permission=$(expr "$U6" - "$ws")
+sed -i "s/### $U2 $U3 $U4 $U5 $U6/### $U2 $U3 $U4 $U5 $permission/g" ipmini
 
 sed -i "s/### $name1 $exp $ivps1 $trial/### $name1 $exp4 $ivps1 @$UU2/g" ipmini
 
