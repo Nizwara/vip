@@ -36,7 +36,11 @@ MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
 uu=$(curl -sS https://pastebin.com/raw/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)
-
+#MENGAMBIL DATA YANG DIBUTUHKAN
+curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep ### | awk '{print $2}' > /etc/github/api
+curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep ### | awk '{print $3}' > /etc/github/email
+curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep ### | awk '{print $4}' > /etc/github/username
+clear
 APIGIT=$(cat /etc/github/api)
 EMAILGIT=$(cat /etc/github/email)
 USERGIT=$(cat /etc/github/username)
