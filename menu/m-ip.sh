@@ -68,10 +68,10 @@ fi
 }
 function gantiip2(){
 author=$(cat /etc/profil)
-superadmin=$(curl -sS https://raw.githubusercontent.com/casper9/permission/main/ipmini | grep $MYIP | awk '{print $7}')
+superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
 if [ "$superadmin" = "VIP" ]; then
 mkdir /root/rmbl
-cd /root/casper/ &> /dev/null
+cd /root/rmbl/ &> /dev/null
 rm -rf .git &> /dev/null
 git init &> /dev/null
 wget https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini &> /dev/null
@@ -223,7 +223,7 @@ hariini=$(date -d "0 days" +"%Y-%m-%d")
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
 mkdir /root/rmbl
-cd /root/casper/ &> /dev/null
+cd /root/rmbl/ &> /dev/null
 rm -rf .git &> /dev/null
 git init &> /dev/null
 wget https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini &> /dev/null
@@ -431,7 +431,7 @@ echo -e ""
 echo -e "$COLOR1 ${NC} NAME CLIENT : $namaclient"
 if [ "$superadmin" = "VIP" ]; then
 echo -e "$COLOR1 ${NC}  Key SCRIPT : "
-create2=$(cat /root/casper/key2 | grep -w "###" | cut -d ' ' -f 3-3)
+create2=$(cat /root/rmbl/key2 | grep -w "###" | cut -d ' ' -f 3-3)
 echo -e "${create2}"
 else
 echo -e "$COLOR1 ${NC}  Key SCRIPT : Key${key}"
@@ -442,7 +442,7 @@ echo -e ""
 echo -e ""
 echo -e "$COLOR1 ${NC}  Silahkan Disave Keynya"
 if [ "$superadmin" = "VIP" ]; then
-create3=$(cat /root/casper/key2 | grep -w "###" | cut -d ' ' -f 3-3)
+create3=$(cat /root/rmbl/key2 | grep -w "###" | cut -d ' ' -f 3-3)
 TEXT="
 <code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
 <b>  ЁЯФ▒ Info License Key </b>
@@ -506,7 +506,7 @@ git init &> /dev/null
 ##touch ipmini &> /dev/null
 clear
 
-grep -E "$uu$listuser" "ipmini" >>/root/casper/client
+grep -E "$uu$listuser" "ipmini" >>/root/rmbl/client
 
 if [ "$superadmin" = "VIP" ]; then
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "ipmini")
@@ -629,7 +629,7 @@ rm -rf /root/rmbl &> /dev/null
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
 mkdir /root/rmbl
-cd /root/casper/ &> /dev/null
+cd /root/rmbl/ &> /dev/null
 rm -rf .git &> /dev/null
 wget https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini &> /dev/null
 git init &> /dev/null
@@ -754,7 +754,7 @@ rm -rf /root/rmbl &> /dev/null
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
 mkdir /root/rmbl
-cd /root/casper/ &> /dev/null
+cd /root/rmbl/ &> /dev/null
 rm -rf .git &> /dev/null
 wget https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini &> /dev/null
 git init &> /dev/null
@@ -862,7 +862,7 @@ TEXT="
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 
 cd
-rm -rf /root/casper >/dev/null 
+rm -rf /root/rmbl >/dev/null 
 echo -e "$COLOR1тФФ==========тФШ${NC}" 
 echo -e "$COLOR1тФМ==== ${WH}BY${NC} ${COLOR1}=====тФР${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}=== $author ===${NC}                 $COLOR1 $NC"
@@ -1017,8 +1017,8 @@ m-ip
 function renewipvps(){
 clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
-listuser=$(curl -sS https://raw.githubusercontent.com/casper9/permission/main/ipmini | grep $MYIP | awk '{print $2}')
-superadmin=$(curl -sS https://raw.githubusercontent.com/casper9/permission/main/ipmini | grep $MYIP | awk '{print $7}')
+listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
+superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
 uu=$(curl -sS https://pastebin.com/raw/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)
 
 author=$(cat /etc/profil)
@@ -1027,11 +1027,11 @@ CHATID=$(cat /etc/per/id)
 KEY=$(cat /etc/per/token)
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 cd
-rm -rf /root/casper >/dev/null 
+rm -rf /root/rmbl >/dev/null 
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
-mkdir /root/casper
-cd /root/casper
+mkdir /root/rmbl
+cd /root/rmbl
 rm -rf .git &> /dev/null
 wget https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini &> /dev/null
 git init &> /dev/null
@@ -1161,8 +1161,8 @@ cd
 rm -rf /root/rmbl >/dev/null 
 git config --global user.email "${EMAILGIT}"
 git config --global user.name "${USERGIT}"
-mkdir /root/casper
-cd /root/casper/
+mkdir /root/rmbl
+cd /root/rmbl/
 rm -rf .git &> /dev/null
 wget https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini &> /dev/null
 git init &> /dev/null
