@@ -213,7 +213,7 @@ U4=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini |
 U5=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $5}')
 U6=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $6}')
 
-echo "### $client $exp $daftar" >> /etc/regip/ipmini
+echo "### $client $exp $daftar" >> /etc/permission/ipmini
 exp=$(date -d "$hari days" +"%Y-%m-%d")
 hariini=$(date -d "0 days" +"%Y-%m-%d")
 git config --global user.email "${EMAILGIT}" &> /dev/null
@@ -290,7 +290,7 @@ nama2=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmin
 Exp2=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $3}')
 job2=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
 ipmini=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $6}')
-sisaip=$(cat /etc/regip/ipmini | wc -l) 
+sisaip=$(cat /etc/permission/ipmini | wc -l) 
 totalip=$(expr "$ipmini" - "$sisaip")
 if [ "$job2" = "VIP" ]; then
 job="VIP SUPER ADMIN"
@@ -1186,7 +1186,7 @@ m-ip
 }
 Isadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $5}')
 ipmini=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $6}')
-sisaip=$(cat /etc/regip/ipmini | wc -l) 
+sisaip=$(cat /etc/permission/ipmini | wc -l) 
 ss=0
 if [ "$Isadmin" = "OFF" ]; then
 clear
