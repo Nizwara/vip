@@ -31,16 +31,15 @@ checking_sc() {
 }
 checking_sc
 cd
+curl -sS curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/email
+curl -sS curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/username
+curl -sS curl -sS https://raw.githubusercontent.com/Nizwara/vip/main/regis | grep "###" | awk '{print $2}' > /etc/github/api
 rm -rf /root/rmbl >/dev/null 
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
-uu=$(curl -sS https://pastebin.com/raw/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)
-#MENGAMBIL DATA YANG DIBUTUHKAN
-curl -S https://pastebin.com/raw/AFJ3T9Mt > /etc/github/email
-curl -S https://pastebin.com/raw/xGRQghLw > /etc/github/username
-curl -S https://pastebin.com/raw/q9PN1Us9 > /etc/github/api
-clear
+uu=$(cat /etc/github/api)
+
 APIGIT=$(cat /etc/github/api)
 EMAILGIT=$(cat /etc/github/email)
 USERGIT=$(cat /etc/github/username)
@@ -261,16 +260,16 @@ echo -e "$COLOR1 ${NC}  Register Date : $hariini"
 echo -e "$COLOR1 ${NC}  Expired Date  : $exp"
 echo -e "$COLOR1 ${NC}  Durasi Script  : $certificate Days"
 TEXT="
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
-<b>  ЁЯФ▒ INFO REGISTER IP </b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
+<b>  ▒ INFO REGISTER IP </b>
+<code>—————————————————————————————</code>
 <b>CLIENT NAME   : ${client}</b>
 <b>IP VPS CLIENT  : ${daftar}</b>
 <b>REGISTER DATE : ${hariini}</b>
 <b>EXPIRED DATE  : ${exp}</b>
 <b>DURASI SCRIPT : ${certificate} Days</b>
 <b>Succes Create this IP</b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
 <i>Tunggu 5Menit Untuk Server KeRefresh</i>
 "
 
@@ -444,31 +443,31 @@ echo -e "$COLOR1 ${NC}  Silahkan Disave Keynya"
 if [ "$superadmin" = "VIP" ]; then
 create3=$(cat /root/rmbl/key2 | grep -w "###" | cut -d ' ' -f 3-3)
 TEXT="
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
-<b>  ЁЯФ▒ Info License Key </b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
+<b>  ▒ Info License Key </b>
+<code>—————————————————————————————</code>
 <b>Nama Client   : $namaclient</b>
 <b>KEY SCRIPT  : </b>
 <code>${create3}</code>
 <b>TGL Register : ${hariini}</b>
 <b>DURASI SCRIPT : ${totalkey} Hari</b>
 <b>Succes Create This Key</b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
 <i>Tunggu 5Menit Untuk Server KeRefresh</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ЁЯФе╔к╔┤sс┤Ыс┤А╩Я╩Я sс┤Д╩А╔кс┤Шс┤Ы","url":"https://t.me/casperinject/187"},{"text":"ЁЯФе ╩Ас┤З╔┤с┤Зс┤б sс┤Д╩А╔кс┤Шс┤Ы","url":"https://t.me/casperinject/337"}]]}'
+"'&reply_markup={"inline_keyboard":[[{"text":"Chat Me","url":"https://t.me/"},{"text":"Whatsapp","url":"https://wa.me/6285932900535"}]]}'
 else
 TEXT="
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
-<b>  ЁЯФ▒ Info License Key </b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
+<b>  ▒ Info License Key </b>
+<code>—————————————————————————————</code>
 <b>Nama Client   : $namaclient</b>
 <b>KEY SCRIPT  : </b><code>Key${key}</code>
 <b>REGISTER DATE : ${hariini}</b>
 <b>DURASI SCRIPT : ${totalkey} Hari</b>
 <b>Succes Create This Key</b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
 <i>Tunggu 5Menit Untuk Server KeRefresh</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ЁЯФе╔к╔┤sс┤Ыс┤А╩Я╩Я sс┤Д╩А╔кс┤Шс┤Ы","url":"https://t.me/casperinject/187"},{"text":"ЁЯФе ╩Ас┤З╔┤с┤Зс┤б sс┤Д╩А╔кс┤Шс┤Ы","url":"https://t.me/casperinject/337"}]]}'
+"'&reply_markup={"inline_keyboard":[[{"text":"Chat Me","url":"https://t.me/"},{"text":"Whatsapp","url":"https://wa.me/6285932900535"}]]}'
 fi
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 cd
@@ -487,7 +486,7 @@ clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
-uu=$(curl -sS https://pastebin.com/raw/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)
+uu=$(curl -S https://pastebin.com/raw/q9PN1Us9)
 
 author=$(cat /etc/profil)
 TIMES="10"
@@ -590,14 +589,14 @@ echo -e "$COLOR1 ${NC}  Expired Date : $exp"
 echo -e "$COLOR1 ${NC}  Client Name  : $name1"
 cd
 TEXT="
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
-<b>  ЁЯФ▒ INFO DELETE IP </b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
+<b>  ▒ INFO DELETE IP </b>
+<code>—————————————————————————————</code>
 <b>CLIENT NAME   : <code>${name1}</code></b>
 <b>IP VPS CLIENT  : <code>${ivps1}</code></b>
 <b>EXPIRED DATE  : <code>${exp}</code></b>
 <b>Succes Delete this IP</b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
 <i>Tunggu 5Menit Untuk Server KeRefresh</i>
 "
 
@@ -617,7 +616,7 @@ clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
-uu=$(curl -sS https://pastebin.com/raw/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)
+uu=$(curl -S https://pastebin.com/raw/q9PN1Us9)
 
 author=$(cat /etc/profil)
 TIMES="10"
@@ -716,14 +715,14 @@ echo -e "$COLOR1 ${NC}  IP OLD RESS  : $iptambah IP"
 echo -e "$COLOR1 ${NC}  NEW ADD IP  : $ipbaru IP"
 
 TEXT="
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
-<b>  ЁЯФ▒ INFO TAMBAH IP RESELLER </b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
+<b>  ▒ INFO TAMBAH IP RESELLER </b>
+<code>—————————————————————————————</code>
 <b>CLIENT NAME   : <code>${name1} </code></b>
 <b>SISA IP  : <code>${iptambah} IP</code></b>
 <b>TAMBAHAN IP  : <code>>${ipbaru} IP</code></b>
 <b>Succes Tambah IP Reseller</b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
 <i>Tunggu 5Menit Untuk Server KeRefresh</i>
 " 
 
@@ -742,7 +741,7 @@ clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
-uu=$(curl -sS https://pastebin.com/raw/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)
+uu=$(curl -S https://pastebin.com/raw/q9PN1Us9)
 
 author=$(cat /etc/profil)
 TIMES="10"
@@ -849,13 +848,13 @@ echo -e "$COLOR1 ${NC}  Name New   : $namabaru"
 echo -e "$COLOR1 ${NC}  IPVPS        : $ivps1"
 cd
 TEXT="
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
-<b> ЁЯФ▒ INFO GANTI NAMA IPVPS</b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
+<b> ▒ INFO GANTI NAMA IPVPS</b>
+<code>—————————————————————————————</code>
 <b>Name Old   : <code>${name1}</code></b>
 <b>New Name  : <code>${namabaru}</code></b>
 <b>Succes Change</b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
 <i>Tunggu 5Menit Untuk Server KeRefresh</i>
 "
 
@@ -876,7 +875,7 @@ clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
-uu=$(curl -sS https://pastebin.com/raw/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)
+uu=$(curl -S https://pastebin.com/raw/q9PN1Us9)
 
 author=$(cat /etc/profil)
 TIMES="10"
@@ -991,14 +990,14 @@ echo -e "$COLOR1 ${NC}  IP VPS New   : $ipbaru"
 echo -e "$COLOR1 ${NC}  Client Name   : $name1"
 cd
 TEXT="
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
-<b> ЁЯФ▒ INFO GANTI IPVPS</b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
+<b> ▒ INFO GANTI IPVPS</b>
+<code>—————————————————————————————</code>
 <b>Client Name   : <code>${name1}</code></b>
 <b>IP Lama   : <code>${ivps1}</code></b>
 <b>IP Baru  : <code>${ipbaru}</code></b>
 <b>Succes Change</b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
 <i>Tunggu 5Menit Untuk Server KeRefresh</i>
 "
 
@@ -1019,7 +1018,7 @@ clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
-uu=$(curl -sS https://pastebin.com/raw/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)
+uu=$(curl -S https://pastebin.com/raw/q9PN1Us9)
 
 author=$(cat /etc/profil)
 TIMES="10"
@@ -1125,16 +1124,16 @@ echo -e "$COLOR1 ${NC}  Expired Date  : $exp4"
 echo -e "$COLOR1 ${NC}  Client Name   : $name1"
 cd
 TEXT="
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
-<b> ЁЯФ▒ RENEW IPVPS SCRIPT</b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
+<b> ▒ RENEW IPVPS SCRIPT</b>
+<code>—————————————————————————————</code>
 <b>CLIENT NAME   : <code>${name1}</code></b>
 <b>IP VPS CLIENT  : <code>${ivps1}</code></b>
 <b>RENEW DATE    : <code>${now}</code></b>
 <b>DAYS ADDED    : <code>${masaaktif} Days</code></b>
 <b>EXPIRED DATE  : <code>${exp4}</code></b>
 <b>Succes Renew This IP</b>
-<code>тЧЗтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтФБтЧЗ</code>
+<code>—————————————————————————————</code>
 <i>Tunggu 5Menit Untuk Server KeRefresh</i>
 "
 
@@ -1155,7 +1154,7 @@ clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
 listuser=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 superadmin=$(curl -sS https://raw.githubusercontent.com/Nizwara/permission/main/ipmini | grep $MYIP | awk '{print $7}')
-uu=$(curl -sS https://pastebin.com/raw/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)
+uu=$(curl -S https://pastebin.com/raw/q9PN1Us9)
 author=$(cat /etc/profil)
 cd
 rm -rf /root/rmbl >/dev/null 
